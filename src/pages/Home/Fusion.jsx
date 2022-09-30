@@ -22,17 +22,9 @@ class Fusion extends React.PureComponent {
         dataIndex: 'name',
         width: '10%',
         render: (text, record) => {
-          let content = text.replace(/\s+/g, "").toString().split(',');
+          let content = text.toString().split(',');
           console.log(content);
-          // let html = '';
-          // for(let i = 0; i < content.length; i++) {
-          //   if (i == 0) {
-          //     html = content[i];
-          //   } else {
-          //     html = <span>{html}<br></br>{content[i]}</span>;
-          //   }
-          // }
-          return <div><a target='_blank' href={content[1]}>{content[0]}</a> [{content[2]}]</div>;
+          return <div>{content[0]} [{content[1].replace(/\s+/g, "")}]</div>;
         },
       },
       {
@@ -128,20 +120,16 @@ class Fusion extends React.PureComponent {
         },
       },
       {
-        title: 'Category Number',
-        dataIndex: 'category_number',
+        title: 'Projection',
+        dataIndex: 'projection',
       },
       {
-        title: 'Categories',
-        dataIndex: 'categories',
+        title: 'Fusion Level',
+        dataIndex: 'fusion_level',
       },
       {
-        title: 'Size',
-        dataIndex: 'size',
-      },
-      {
-        title: 'Scenarios',
-        dataIndex: 'scenarios',
+        title: 'Fusion Operation',
+        dataIndex: 'fusion_operation',
         render: (text, record) => {
           let content = text.toString().split('|');
           let html = '';
@@ -156,34 +144,55 @@ class Fusion extends React.PureComponent {
         },
       },
       {
-        title: 'Record Area',
-        dataIndex: 'record_area',
+        title: 'Network',
+        dataIndex: 'network',
       },
       {
-        title: 'Record Time',
-        dataIndex: 'record_time',
+        title: 'Dataset',
+        dataIndex: 'dataset',
       },
       {
-        title: 'Affiliation',
-        dataIndex: 'affiliation',
+        title: 'Evaluation Metrics',
+        dataIndex: 'evaluation_metrics',
       },
+      {
+        title: 'Conference/Journal',
+        dataIndex: 'conference_journal',
+      },
+      {
+        title: 'Source Code',
+        dataIndex: 'source_code',
+        render: (text, record) => {
+          return <div><a target='_blank' href={text}></a></div>;
+        },
+      },
+      // {
+      //   title: 'Record Area',
+      //   dataIndex: 'record_area',
+      // },
+      // {
+      //   title: 'Record Time',
+      //   dataIndex: 'record_time',
+      // },
+      
 
     ];
     const data = [
       {
         key: '1',
-        name: 'nuScenes, https://nuscenes.org/nuscenes, 1',
+        name: 'Distant vehicle detection using radar and vision, 1',
         year: 2019,
-        task: 'Object Detection | Object Tracking | Localization | Planning | Prediction',
-        annotation: '3D Bounding Box',
+        task: 'Object Detection',
+        annotation: '2D Bounding Box',
         radar_data_representation: 'Point Cloud',
-        category_number: 23,
-        categories: 'Pedestrain, Vehicle, Movable Object, Static Object',
-        size: '1000 scenes, 1.4M boxes, 40k frames, 5.5 hours',
-        scenarios: 'A diverse set of locations (urban, residential, nature and industrial), times (day and night) | sun, rain and clouds',
-        record_area: 'Boston, Singapore',
-        record_time: 'September 2018',
-        affiliation: 'nuTonomy',
+        projection: 'Radar point to image plane',
+        fusion_level: 'Feature Level',
+        fusion_operation: 'Addition | Concatenation',
+        network: 'One-stage network based on ResNet',
+        dataset: 'Self-Recorded',
+        evaluation_metrics: 'AP',
+        conference_journal: '2019 International Conference on Robotics and Automation (ICRA)',
+        source_code: ''
       },
 
     ];
