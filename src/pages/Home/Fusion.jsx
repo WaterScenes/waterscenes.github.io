@@ -194,6 +194,102 @@ class Fusion extends React.PureComponent {
         conference_journal: '2019 International Conference on Robotics and Automation (ICRA)',
         source_code: ''
       },
+      {
+        key: '2',
+        name: 'Distant vehicle detection using radar and vision, 2',
+        year: 2019,
+        task: '',
+        annotation: '',
+        radar_data_representation: '',
+        projection: '',
+        fusion_level: '',
+        fusion_operation: '',
+        network: '',
+        dataset: '',
+        evaluation_metrics: '',
+        conference_journal: '',
+        source_code: ''
+      },
+      {
+        key: '2',
+        name: 'Distant vehicle detection using radar and vision, 2',
+        year: 2019,
+        task: '',
+        annotation: '',
+        radar_data_representation: '',
+        projection: '',
+        fusion_level: '',
+        fusion_operation: '',
+        network: '',
+        dataset: '',
+        evaluation_metrics: '',
+        conference_journal: '',
+        source_code: ''
+      },
+      {
+        key: '2',
+        name: 'Distant vehicle detection using radar and vision, 2',
+        year: 2019,
+        task: '',
+        annotation: '',
+        radar_data_representation: '',
+        projection: '',
+        fusion_level: '',
+        fusion_operation: '',
+        network: '',
+        dataset: '',
+        evaluation_metrics: '',
+        conference_journal: '',
+        source_code: ''
+      },
+      {
+        key: '2',
+        name: 'Distant vehicle detection using radar and vision, 2',
+        year: 2019,
+        task: '',
+        annotation: '',
+        radar_data_representation: '',
+        projection: '',
+        fusion_level: '',
+        fusion_operation: '',
+        network: '',
+        dataset: '',
+        evaluation_metrics: '',
+        conference_journal: '',
+        source_code: ''
+      },
+      {
+        key: '2',
+        name: 'Distant vehicle detection using radar and vision, 2',
+        year: 2019,
+        task: '',
+        annotation: '',
+        radar_data_representation: '',
+        projection: '',
+        fusion_level: '',
+        fusion_operation: '',
+        network: '',
+        dataset: '',
+        evaluation_metrics: '',
+        conference_journal: '',
+        source_code: ''
+      },
+      {
+        key: '2',
+        name: 'Distant vehicle detection using radar and vision, 2',
+        year: 2019,
+        task: '',
+        annotation: '',
+        radar_data_representation: '',
+        projection: '',
+        fusion_level: '',
+        fusion_operation: '',
+        network: '',
+        dataset: '',
+        evaluation_metrics: '',
+        conference_journal: '',
+        source_code: ''
+      },
 
     ];
 
@@ -206,7 +302,7 @@ class Fusion extends React.PureComponent {
         <div className="title-wrapper">
           <h1 name="title" className="title-h1">Fusion Methods</h1>
         </div>
-        <Table columns={columns} dataSource={data} onChange={onChange} />;
+        <Table bordered columns={columns} dataSource={data} onChange={onChange} />
       </div>
     );
   }

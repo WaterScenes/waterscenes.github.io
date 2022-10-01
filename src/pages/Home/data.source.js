@@ -9,80 +9,80 @@ export const Nav00DataSource = {
   Menu: {
     className: 'header0-menu',
     children: [
-      {
-        name: 'item0',
-        className: 'header0-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航一', name: 'text' }],
-        },
-        subItem: [
-          {
-            name: 'sub0',
-            className: 'item-sub',
-            children: {
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'Ant Design',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: '企业级 UI 设计体系',
-                },
-              ],
-            },
-          },
-          {
-            name: 'sub1',
-            className: 'item-sub',
-            children: {
-              className: 'item-sub-item',
-              children: [
-                {
-                  name: 'image0',
-                  className: 'item-image',
-                  children:
-                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-                },
-                {
-                  name: 'title',
-                  className: 'item-title',
-                  children: 'Ant Design',
-                },
-                {
-                  name: 'content',
-                  className: 'item-content',
-                  children: '企业级 UI 设计体系',
-                },
-              ],
-            },
-          },
-        ],
-      },
+      // {
+      //   name: 'item0',
+      //   className: 'header0-item',
+      //   children: {
+      //     href: '#',
+      //     children: [{ children: '导航一', name: 'text' }],
+      //   },
+      //   subItem: [
+      //     {
+      //       name: 'sub0',
+      //       className: 'item-sub',
+      //       children: {
+      //         className: 'item-sub-item',
+      //         children: [
+      //           {
+      //             name: 'image0',
+      //             className: 'item-image',
+      //             children:
+      //               'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
+      //           },
+      //           {
+      //             name: 'title',
+      //             className: 'item-title',
+      //             children: 'Ant Design',
+      //           },
+      //           {
+      //             name: 'content',
+      //             className: 'item-content',
+      //             children: '企业级 UI 设计体系',
+      //           },
+      //         ],
+      //       },
+      //     },
+      //     {
+      //       name: 'sub1',
+      //       className: 'item-sub',
+      //       children: {
+      //         className: 'item-sub-item',
+      //         children: [
+      //           {
+      //             name: 'image0',
+      //             className: 'item-image',
+      //             children:
+      //               'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
+      //           },
+      //           {
+      //             name: 'title',
+      //             className: 'item-title',
+      //             children: 'Ant Design',
+      //           },
+      //           {
+      //             name: 'content',
+      //             className: 'item-content',
+      //             children: '企业级 UI 设计体系',
+      //           },
+      //         ],
+      //       },
+      //     },
+      //   ],
+      // },
       {
         name: 'item1',
         className: 'header0-item',
         children: {
-          href: '#',
-          children: [{ children: '导航二', name: 'text' }],
+          href: '#datasets',
+          children: [{ children: 'Datasets', name: 'text' }],
         },
       },
       {
         name: 'item2',
         className: 'header0-item',
         children: {
-          href: '#',
-          children: [{ children: '导航三', name: 'text' }],
+          href: '#fusion',
+          children: [{ children: 'Fusion', name: 'text' }],
         },
       },
       {
@@ -103,28 +103,29 @@ export const Banner30DataSource = {
     className: 'banner3-text-wrapper',
     children: [
       {
-        name: 'nameEn',
-        className: 'banner3-name-en',
-        children: 'Seeking Experience & Engineering Conference',
-      },
-      {
         name: 'slogan',
         className: 'banner3-slogan',
         children:
           'Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Review',
-        texty: true,
+        // texty: true,
       },
       {
-        name: 'name',
-        className: 'banner3-name',
-        children: '探索极致用户体验与最佳工程实践探索',
+        name: 'nameEn',
+        className: 'banner3-name-en',
+        children: 'Shanliang Yao, Runwei Guan, ',
       },
-      { name: 'button', className: 'banner3-button', children: '立即报名' },
-      {
-        name: 'time',
-        className: 'banner3-time',
-        children: '2018.01.06 / 中国·杭州',
-      },
+      
+      // {
+      //   name: 'name',
+      //   className: 'banner3-name',
+      //   children: '探索极致用户体验与最佳工程实践探索',
+      // },
+      // { name: 'button', className: 'banner3-button', children: '立即报名' },
+      // {
+      //   name: 'time',
+      //   className: 'banner3-time',
+      //   children: '2018.01.06 / 中国·杭州',
+      // },
     ],
   },
 };
@@ -136,29 +137,14 @@ export const Content130DataSource = {
   titleWrapper: {
     className: 'title-wrapper',
     children: [
-      {
-        name: 'image',
-        children:
-          'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
-        className: 'title-image',
-      },
-      { name: 'title', children: '丰富的特色展台', className: 'title-h1' },
-      {
-        name: 'content',
-        children: (
-          <span>
-            <p>[1]&nbsp; xxxxx</p>
-            <p>[2] xxxx</p>
-            <p>[3] xxxx</p>
-          </span>
-        ),
-        className: 'title-content l4pmd64c3o-editor_css',
-      },
-      {
-        name: 'content2',
-        children: '现场问诊，为你答疑解难',
-        className: 'title-content',
-      },
+    //   {
+    //     name: 'image',
+    //     children:
+    //       'https://gw.alipayobjects.com/zos/rmsportal/PiqyziYmvbgAudYfhuBr.svg',
+    //     className: 'title-image',
+    //   },
+    //   { name: 'title', children: '丰富的特色展台', className: 'title-h1' },
+      
     ],
   },
 };
@@ -169,8 +155,7 @@ export const Footer00DataSource = {
     className: 'copyright',
     children: (
       <span>
-        ©2018 <a href="https://motion.ant.design">Ant Motion</a> All Rights
-        Reserved
+        ©2022 <a href="https://github.com/XJTLU-VEC">XJTLU-VEC</a> All Rights Reserved
       </span>
     ),
   },

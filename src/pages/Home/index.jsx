@@ -7,6 +7,7 @@ import Nav0 from './Nav0';
 import Banner3 from './Banner3';
 import Dataset from './Dataset';
 import Fusion from './Fusion';
+import Reference from './Reference';
 import Content13 from './Content13';
 import Footer0 from './Footer0';
 
@@ -24,6 +25,10 @@ import {
 import {
   FusionDataSource,
 } from './fusion.source';
+
+import {
+  ReferenceDataSource,
+} from './reference.source';
 
 import './less/antMotionStyle.less';
 
@@ -85,6 +90,12 @@ export default class Home extends React.Component {
         id="Fusion0_0"
         key="Fusion0_0"
         dataSource={FusionDataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Reference
+        id="Fusion0_0"
+        key="Fusion0_0"
+        dataSource={ReferenceDataSource}
         isMobile={this.state.isMobile}
       />,
       <Content13

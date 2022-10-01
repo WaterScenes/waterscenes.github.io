@@ -3,6 +3,7 @@ import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
 import { Table } from 'antd';
+import { Tag } from 'antd';
 
 class Dataset extends React.PureComponent {
   render() {
@@ -22,17 +23,7 @@ class Dataset extends React.PureComponent {
         dataIndex: 'name',
         width: '10%',
         render: (text, record) => {
-          let content = text.replace(/\s+/g, "").toString().split(',');
-          console.log(content);
-          // let html = '';
-          // for(let i = 0; i < content.length; i++) {
-          //   if (i == 0) {
-          //     html = content[i];
-          //   } else {
-          //     html = <span>{html}<br></br>{content[i]}</span>;
-          //   }
-          // }
-          return <div><a target='_blank' href={content[1]}>{content[0]}</a> [{content[2]}]</div>;
+          return <div><a target='_blank' href={text[1]}>{text[0]}</a> [<a href='#references'>{text[2]}</a>]</div>;
         },
       },
       {
@@ -53,21 +44,32 @@ class Dataset extends React.PureComponent {
             value: 'Semantic Segmentation',
           },
         ],
-        onFilter: (value, record) => record.address.startsWith(value),
+        onFilter: (value, record) => record.task.indexOf(value) >= 0,
         filterSearch: true,
-        width: '10%',
-        render: (text, record) => {
-          let content = text.toString().split('|');
-          let html = '';
-          for (let i = 0; i < content.length; i++) {
-            if (i == 0) {
-              html = content[i];
-            } else {
-              html = <span>{html}<br></br>{content[i]}</span>;
-            }
-          }
-          return <div>{html}</div>;
-        },
+        render: (text, record) => (
+          <span>
+            {text.map(tag => {
+              let color = '';
+              switch(tag) {
+                case 'Object Detection': color = '#1890ff'; break;
+                case 'Semantic Segmentation': color = '#fa541c'; break;
+                case 'Object Tracking': color = '#fa8c16'; break;
+                case 'Localization': color = '#13c2c2'; break;
+                case 'Planning': color = '#52c41a'; break;
+                case 'Prediction': color = '#f5222d'; break;
+                case '': color = '#722ed1'; break;
+                case '': color = '#eb2f96'; break;
+                case '': color = '#722ed1'; break;
+                default: color = 'blue-inverse';
+              }
+              return (
+                <Tag color={color} key={tag}>
+                  {tag}
+                </Tag>
+              );
+            })}
+          </span>
+        )
       },
       {
         title: 'Annotation',
@@ -85,18 +87,30 @@ class Dataset extends React.PureComponent {
         onFilter: (value, record) => record.address.startsWith(value),
         filterSearch: true,
         // width: '20%',
-        render: (text, record) => {
-          let content = text.toString().split('|');
-          let html = '';
-          for (let i = 0; i < content.length; i++) {
-            if (i == 0) {
-              html = content[i];
-            } else {
-              html = <span>{html}<br></br>{content[i]}</span>;
-            }
-          }
-          return <div>{html}</div>;
-        },
+        render: (text, record) => (
+          <span>
+            {text.map(tag => {
+              let color = '';
+              switch(tag) {
+                case 'Object Detection': color = '#1890ff'; break;
+                case 'Semantic Segmentation': color = '#fa541c'; break;
+                case 'Object Tracking': color = '#fa8c16'; break;
+                case 'Localization': color = '#13c2c2'; break;
+                case 'Planning': color = '#52c41a'; break;
+                case 'Prediction': color = '#f5222d'; break;
+                case '': color = '#722ed1'; break;
+                case '': color = '#eb2f96'; break;
+                case '': color = '#722ed1'; break;
+                default: color = 'blue-inverse';
+              }
+              return (
+                <Tag color={color} key={tag}>
+                  {tag}
+                </Tag>
+              );
+            })}
+          </span>
+        )
       },
       {
         title: 'Radar Data Representation',
@@ -114,18 +128,37 @@ class Dataset extends React.PureComponent {
         onFilter: (value, record) => record.address.startsWith(value),
         filterSearch: true,
         // width: '20%',
-        render: (text, record) => {
-          let content = text.toString().split('|');
-          let html = '';
-          for (let i = 0; i < content.length; i++) {
-            if (i == 0) {
-              html = content[i];
-            } else {
-              html = <span>{html}<br></br>{content[i]}</span>;
-            }
-          }
-          return <div>{html}</div>;
-        },
+        // render: (text, record) => {
+        //   let content = text.toString().split('|');
+        //   let html = '';
+        //   for (let i = 0; i < content.length; i++) {
+        //     if (i == 0) {
+        //       html = content[i];
+        //     } else {
+        //       html = <span>{html}<br></br>{content[i]}</span>;
+        //     }
+        //   }
+        //   return <div>{html}</div>;
+        // },
+        render: (text, record) => (
+          <span>
+            {text.map(tag => {
+              let color = '';
+              switch(tag) {
+                case 'Point Cloud': color = '#108ee9'; break;
+                case 'ADC Signal': color = '#f50'; break;
+                case 'Frequency Tensor': color = '#2db7f5'; break;
+                case 'Grid Map': color = '#87d068'; break;
+                default: color = '#108ee9';
+              }
+              return (
+                <Tag color={color} key={tag}>
+                  {tag}
+                </Tag>
+              );
+            })}
+          </span>
+        )
       },
       {
         title: 'Category Number',
@@ -142,18 +175,17 @@ class Dataset extends React.PureComponent {
       {
         title: 'Scenarios',
         dataIndex: 'scenarios',
-        render: (text, record) => {
-          let content = text.toString().split('|');
-          let html = '';
-          for (let i = 0; i < content.length; i++) {
-            if (i == 0) {
-              html = content[i];
-            } else {
-              html = <span>{html}<br></br>{content[i]}</span>;
-            }
-          }
-          return <div>{html}</div>;
-        },
+        render: (text, record) => (
+          <span>
+            {text.map(tag => {
+              return (
+                <div>
+                  {tag}
+                </div>
+              );
+            })}
+          </span>
+        )
       },
       {
         title: 'Record Area',
@@ -172,20 +204,34 @@ class Dataset extends React.PureComponent {
     const data = [
       {
         key: '1',
-        name: 'nuScenes, https://nuscenes.org/nuscenes, 1',
+        name: ['nuScenes', 'https://nuscenes.org/nuscenes', '1'],
         year: 2019,
-        task: 'Object Detection | Object Tracking | Localization | Planning | Prediction',
-        annotation: '3D Bounding Box',
-        radar_data_representation: 'Point Cloud',
+        task: ['Object Detection', 'Object Tracking', 'Localization', 'Planning', 'Prediction'],
+        annotation: ['3D Bounding Box'],
+        radar_data_representation: ['Point Cloud'],
         category_number: 23,
         categories: 'Pedestrain, Vehicle, Movable Object, Static Object',
         size: '1000 scenes, 1.4M boxes, 40k frames, 5.5 hours',
-        scenarios: 'A diverse set of locations (urban, residential, nature and industrial), times (day and night) | sun, rain and clouds',
+        scenarios: ['A diverse set of locations (urban, residential, nature and industrial), times (day and night)', 'sun, rain and clouds'],
         record_area: 'Boston, Singapore',
         record_time: 'September 2018',
         affiliation: 'nuTonomy',
       },
-
+      {
+        key: '2',
+        name: [],
+        year: 2019,
+        task: [],
+        annotation: [],
+        radar_data_representation: [],
+        category_number: 0,
+        categories: '',
+        size: '',
+        scenarios: [],
+        record_area: '',
+        record_time: '',
+        affiliation: '',
+      },
     ];
 
     const onChange = (pagination, filters, sorter, extra) => {
@@ -193,11 +239,11 @@ class Dataset extends React.PureComponent {
     };
 
     return (
-      <div {...props} {...dataSource.wrapper}>
+      <div {...props} {...dataSource.wrapper} id="datasets">
         <div className="title-wrapper">
           <h1 name="title" className="title-h1">Datasets</h1>
         </div>
-        <Table columns={columns} dataSource={data} onChange={onChange} />;
+        <Table bordered pagination={{hideOnSinglePage: true}} columns={columns} dataSource={data} onChange={onChange} />;
       </div>
     );
   }
