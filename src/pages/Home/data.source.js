@@ -21,14 +21,14 @@ export const Nav00DataSource = {
       },
       {
         name: 'linkNav',
-        to: 'datasets',
+        to: 'methods',
         children: 'Methods',
         className: 'menu-item',
       },
       {
         name: 'linkNav',
-        to: 'datasets',
-        children: 'Datasets',
+        to: 'citation',
+        children: 'Citation',
         className: 'menu-item',
       },
     ],
@@ -90,7 +90,7 @@ export const Banner30DataSource = {
       {
         name: 'nameEn',
         className: 'banner3-name-en',
-        children: 'Shanliang Yao, Runwei Guan, ',
+        children: 'Shanliang Yao, Runwei Guan, Xiaohui Zhu',
       },
       
       // {
@@ -99,11 +99,11 @@ export const Banner30DataSource = {
       //   children: '探索极致用户体验与最佳工程实践探索',
       // },
       // { name: 'button', className: 'banner3-button', children: '立即报名' },
-      // {
-      //   name: 'time',
-      //   className: 'banner3-time',
-      //   children: '2018.01.06 / 中国·杭州',
-      // },
+      {
+        name: 'time',
+        className: 'banner3-time',
+        children: 'University of Liverpool',
+      },
     ],
   },
 };

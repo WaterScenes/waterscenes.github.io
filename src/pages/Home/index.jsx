@@ -5,6 +5,7 @@ import { enquireScreen } from 'enquire-js';
 
 import Nav0 from './Nav0';
 import Banner3 from './Banner3';
+import Comparison from './Comparison';
 import Dataset from './Dataset';
 import Fusion from './Fusion';
 import Reference from './Reference';
@@ -29,8 +30,12 @@ import {
 import {
   ReferenceDataSource,
 } from './reference.source';
+import {
+  ComparisonDataSource,
+} from './comparison.source';
 
 import './less/antMotionStyle.less';
+
 
 let isMobile;
 enquireScreen((b) => {
@@ -78,6 +83,12 @@ export default class Home extends React.Component {
         id="Banner3_0"
         key="Banner3_0"
         dataSource={Banner30DataSource}
+        isMobile={this.state.isMobile}
+      />,
+      <Comparison
+        id="Comparison0_0"
+        key="Comparison0_0"
+        dataSource={ComparisonDataSource}
         isMobile={this.state.isMobile}
       />,
       <Dataset

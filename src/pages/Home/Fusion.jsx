@@ -298,7 +298,7 @@ class Fusion extends React.PureComponent {
     };
 
     return (
-      <div {...props} {...dataSource.wrapper}>
+      <div {...props} {...dataSource.wrapper} id="methods">
         <div className="title-wrapper">
           <h1 name="title" className="title-h1">Fusion Methods</h1>
         </div>

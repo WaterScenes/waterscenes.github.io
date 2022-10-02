@@ -13,29 +13,50 @@ class Dataset extends React.PureComponent {
     delete props.isMobile;
 
 
+    const data_dataset = [
+      'H. Caesar et al., “nuScenes: A multimodal dataset for autonomous driving,” 2020 Ieee Cvf Conf Comput Vis Pattern Recognit Cvpr, vol. 00, pp. 11618–11628, 2020, doi: 10.1109/cvpr42600.2020.01164.',
+      'H. Caesar et al., “nuScenes: A multimodal dataset for autonomous driving,” 2020 Ieee Cvf Conf Comput Vis Pattern Recognit Cvpr, vol. 00, pp. 11618–11628, 2020, doi: 10.1109/cvpr42600.2020.01164.'
+    ];
+
+    const data_fusion = [
+      'H. Caesar et al., “nuScenes: A multimodal dataset for autonomous driving,” 2020 Ieee Cvf Conf Comput Vis Pattern Recognit Cvpr, vol. 00, pp. 11618–11628, 2020, doi: 10.1109/cvpr42600.2020.01164.',
+      'H. Caesar et al., “nuScenes: A multimodal dataset for autonomous driving,” 2020 Ieee Cvf Conf Comput Vis Pattern Recognit Cvpr, vol. 00, pp. 11618–11628, 2020, doi: 10.1109/cvpr42600.2020.01164.'
+    ];
+
+    const references_dataset = data_dataset.map((item, key) => {
+      return (
+        <p>
+          [{key + 1}] {item}
+        </p>
+      );
+    });
+    const references_fusion = data_dataset.map((item, key) => {
+      return (
+        <p>
+          [{key + 1 + data_dataset.length}] {item}
+        </p>
+      );
+    });
+
     return (
       <div className="home-page-wrapper content12-wrapper">
         <div className="content12">
-        <h1 id="references"  name="title" className="title-h1">Citation</h1>
-          {/* <div class="title-wrapper" data-edit="titleWrapper"> */}
+          <h1 id="references" name="title" className="title-h1">Citation</h1>
           <pre><code>
-         
-</code>
+
+          </code>
           </pre>
-        {/* </div> */}
+          {/* </div> */}
         </div>
 
         <div className="content12">
-        <h1 id="references"  name="title" class="title-h1">References</h1>
-          {/* <div class="title-wrapper" data-edit="titleWrapper"> */}
+          <h1 id="references" name="title" class="title-h1">References</h1>
           <span>
-            <p>[1] H. Caesar et al., “nuScenes: A multimodal dataset for autonomous driving,” 2020 Ieee Cvf Conf Comput Vis Pattern Recognit Cvpr, vol. 00, pp. 11618–11628, 2020, doi: 10.1109/cvpr42600.2020.01164.</p>
-            <p>[2] xxxx</p>
-            <p>[3] xxxx</p>
+            {references_dataset}
+            {references_fusion}
           </span>
-        {/* </div> */}
         </div>
-    </div>
+      </div>
     )
   }
 }
