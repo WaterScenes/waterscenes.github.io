@@ -14,9 +14,9 @@ class Dataset extends React.PureComponent {
 
 
     return (
-      <div class="home-page-wrapper content12-wrapper">
-        <div class="content12">
-        <h1 id="references"  name="title" class="title-h1">Citation</h1>
+      <div className="home-page-wrapper content12-wrapper">
+        <div className="content12">
+        <h1 id="references"  name="title" className="title-h1">Citation</h1>
           {/* <div class="title-wrapper" data-edit="titleWrapper"> */}
           <pre><code>
          
@@ -25,7 +25,7 @@ class Dataset extends React.PureComponent {
         {/* </div> */}
         </div>
 
-        <div class="content12">
+        <div className="content12">
         <h1 id="references"  name="title" class="title-h1">References</h1>
           {/* <div class="title-wrapper" data-edit="titleWrapper"> */}
           <span>

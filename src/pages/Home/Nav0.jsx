@@ -1,15 +1,12 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
-import { Menu } from 'antd';
-import { getChildrenToRender } from './utils';
-
-const { Item, SubMenu } = Menu;
+import { Link } from 'rc-scroll-anim';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      phoneOpen: undefined,
+      phoneOpen: false,
     };
   }
 
@@ -22,51 +19,23 @@ class Header extends React.Component {
 
   render() {
     const { dataSource, isMobile, ...props } = this.props;
+
     const { phoneOpen } = this.state;
-    const navData = dataSource.Menu.children;
-    const navChildren = navData.map((item) => {
-      const { children: a, subItem, ...itemProps } = item;
-      if (subItem) {
-        return (
-          <SubMenu
-            key={item.name}
-            {...itemProps}
-            title={
-              <div
-                {...a}
-                className={`header0-item-block ${a.className}`.trim()}
-              >
-                {a.children.map(getChildrenToRender)}
-              </div>
-            }
-            popupClassName="header0-item-child"
-          >
-            {subItem.map(($item, ii) => {
-              const { children: childItem } = $item;
-              const child = childItem.href ? (
-                <a {...childItem}>
-                  {childItem.children.map(getChildrenToRender)}
-                </a>
-              ) : (
-                <div {...childItem}>
-                  {childItem.children.map(getChildrenToRender)}
-                </div>
-              );
-              return (
-                <Item key={$item.name || ii.toString()} {...$item}>
-                  {child}
-                </Item>
-              );
-            })}
-          </SubMenu>
-        );
+    const { LinkMenu } = dataSource;
+    const navData = LinkMenu.children;
+    const navChildren = Object.keys(navData).map((key, i) => {
+      const item = navData[key];
+      let tag = Link;
+      const tagProps = {};
+      if (item.to && item.to.match(/\//g)) {
+        tagProps.href = item.to;
+        tag = 'a';
+        delete item.to;
       }
-      return (
-        <Item key={item.name} {...itemProps}>
-          <a {...a} className={`header0-item-block ${a.className}`.trim()}>
-            {a.children.map(getChildrenToRender)}
-          </a>
-        </Item>
+      return React.createElement(
+        tag,
+        { ...item, ...tagProps, key: i.toString() },
+        navData[key].children
       );
     });
     const moment = phoneOpen === undefined ? 300 : null;
@@ -100,7 +69,7 @@ class Header extends React.Component {
             </div>
           )}
           <TweenOne
-            {...dataSource.Menu}
+            {...LinkMenu}
             animation={
               isMobile
                 ? {
@@ -118,13 +87,7 @@ class Header extends React.Component {
             moment={moment}
             reverse={!!phoneOpen}
           >
-            <Menu
-              mode={isMobile ? 'inline' : 'horizontal'}
-              defaultSelectedKeys={['sub0']}
-              theme="dark"
-            >
-              {navChildren}
-            </Menu>
+            {navChildren}
           </TweenOne>
         </div>
       </TweenOne>

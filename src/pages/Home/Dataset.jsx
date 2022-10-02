@@ -232,6 +232,21 @@ class Dataset extends React.PureComponent {
         record_time: '',
         affiliation: '',
       },
+      {
+        key: '3',
+        name: [],
+        year: 2019,
+        task: [],
+        annotation: [],
+        radar_data_representation: [],
+        category_number: 0,
+        categories: '',
+        size: '',
+        scenarios: [],
+        record_area: '',
+        record_time: '',
+        affiliation: '',
+      },
     ];
 
     const onChange = (pagination, filters, sorter, extra) => {

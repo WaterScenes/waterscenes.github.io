@@ -1,101 +1,79 @@
 import React from 'react';
+import logo from './images/logo.png';
+
 export const Nav00DataSource = {
-  wrapper: { className: 'header0 home-page-wrapper' },
+  isScrollLink: true,
+  wrapper: { className: 'header2 home-page-wrapper jrhtw9ph4a-editor_css' },
   page: { className: 'home-page' },
   logo: {
-    className: 'header0-logo',
-    children: 'https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg',
+    className: 'header2-logo',
+    children:
+      logo,
   },
-  Menu: {
-    className: 'header0-menu',
+  LinkMenu: {
+    className: 'header2-menu',
     children: [
-      // {
-      //   name: 'item0',
-      //   className: 'header0-item',
-      //   children: {
-      //     href: '#',
-      //     children: [{ children: '导航一', name: 'text' }],
-      //   },
-      //   subItem: [
-      //     {
-      //       name: 'sub0',
-      //       className: 'item-sub',
-      //       children: {
-      //         className: 'item-sub-item',
-      //         children: [
-      //           {
-      //             name: 'image0',
-      //             className: 'item-image',
-      //             children:
-      //               'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-      //           },
-      //           {
-      //             name: 'title',
-      //             className: 'item-title',
-      //             children: 'Ant Design',
-      //           },
-      //           {
-      //             name: 'content',
-      //             className: 'item-content',
-      //             children: '企业级 UI 设计体系',
-      //           },
-      //         ],
-      //       },
-      //     },
-      //     {
-      //       name: 'sub1',
-      //       className: 'item-sub',
-      //       children: {
-      //         className: 'item-sub-item',
-      //         children: [
-      //           {
-      //             name: 'image0',
-      //             className: 'item-image',
-      //             children:
-      //               'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-      //           },
-      //           {
-      //             name: 'title',
-      //             className: 'item-title',
-      //             children: 'Ant Design',
-      //           },
-      //           {
-      //             name: 'content',
-      //             className: 'item-content',
-      //             children: '企业级 UI 设计体系',
-      //           },
-      //         ],
-      //       },
-      //     },
-      //   ],
-      // },
       {
-        name: 'item1',
-        className: 'header0-item',
-        children: {
-          href: '#datasets',
-          children: [{ children: 'Datasets', name: 'text' }],
-        },
+        name: 'linkNav',
+        to: 'datasets',
+        children: 'Datasets',
+        className: 'menu-item',
       },
       {
-        name: 'item2',
-        className: 'header0-item',
-        children: {
-          href: '#fusion',
-          children: [{ children: 'Fusion', name: 'text' }],
-        },
+        name: 'linkNav',
+        to: 'datasets',
+        children: 'Methods',
+        className: 'menu-item',
       },
       {
-        name: 'item3',
-        className: 'header0-item',
-        children: {
-          href: '#',
-          children: [{ children: '导航四', name: 'text' }],
-        },
+        name: 'linkNav',
+        to: 'datasets',
+        children: 'Datasets',
+        className: 'menu-item',
       },
     ],
   },
-  mobileMenu: { className: 'header0-mobile-menu' },
+  mobileMenu: { className: 'header2-mobile-menu' },
+  Menu: {
+    children: [
+      {
+        name: 'Banner3_0',
+        to: 'Banner3_0',
+        children: '首页',
+        className: 'active menu-item',
+      },
+      {
+        name: 'Content8_0',
+        to: 'Content8_0',
+        children: '特邀嘉宾',
+        className: 'menu-item',
+      },
+      {
+        name: 'Content9_0',
+        to: 'Content9_0',
+        children: '会议日程',
+        className: 'menu-item',
+      },
+      {
+        name: 'Content10_0',
+        to: 'Content10_0',
+        children: '大会地址',
+        className: 'menu-item',
+      },
+      {
+        name: 'Content11_0',
+        to: 'Content11_0',
+        children: '展台展示',
+        className: 'menu-item',
+      },
+      {
+        name: 'Content12_0',
+        to: 'Content12_0',
+        children: '特别鸣谢',
+        className: 'menu-item',
+      },
+    ],
+  },
 };
 export const Banner30DataSource = {
   wrapper: { className: 'banner3' },
