@@ -40,15 +40,18 @@ class Dataset extends React.PureComponent {
 
     return (
       <div className="home-page-wrapper content12-wrapper">
-        <div className="content12">
+        <div className="content12 citation">
           <h1 id="references" name="title" className="title-h1">Citation</h1>
-          <pre><code>
+          <div style={{ backgroundColor: '#ffffff', padding: '20px'}}>
+            <pre><code>
+              111
+            </code>
+            </pre>
+          </div>
 
-          </code>
-          </pre>
           {/* </div> */}
         </div>
-
+        <div style={{ backgroundColor: '#e6f7ff', height: '40px' }}>11</div>
         <div className="content12">
           <h1 id="references" name="title" class="title-h1">References</h1>
           <span>
