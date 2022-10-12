@@ -5,7 +5,7 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 // import * as G2Plot from '@antv/g2plot'
 import { Column } from '@ant-design/plots';
 
-import { Table, Tag } from 'antd';
+import { Table, Tag, Affix } from 'antd';
 import { each, groupBy } from '@antv/util';
 
 class Dataset extends React.PureComponent {
@@ -320,7 +320,7 @@ class Dataset extends React.PureComponent {
         // "title": null,
       },
       autoFit: true,
-      appendPadding: [0, 200, 10 , 200],
+      appendPadding: [0, 300, 10 , 300],
       "xField": "x",
       "yField": "y",
       seriesField: 'type',
