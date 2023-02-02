@@ -2,10 +2,12 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
+// import { FloatButton } from 'antd';
 
 import Nav0 from './Nav0';
 import Banner3 from './Banner3';
 import Comparison from './Comparison';
+import RadarChart from './RadarChart';
 import Dataset from './Dataset';
 import Fusion from './Fusion';
 import Reference from './Reference';
@@ -85,10 +87,16 @@ export default class Home extends React.Component {
         dataSource={Banner30DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Comparison
-        id="Comparison0_0"
-        key="Comparison0_0"
-        dataSource={ComparisonDataSource}
+      // <Comparison
+      //   id="Comparison0_0"
+      //   key="Comparison0_0"
+      //   dataSource={ComparisonDataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
+      <RadarChart
+        id="Dataset0_0"
+        key="Dataset0_0"
+        dataSource={DatasetDataSource}
         isMobile={this.state.isMobile}
       />,
       <Dataset
@@ -132,6 +140,7 @@ export default class Home extends React.Component {
         {/* 如果不是 dva 2.0 替换成 {children} start */}
         {this.state.show && children}
         {/* 如果不是 dva 2.0 替换成 {children} end */}
+        {/* <FloatButton.BackTop visibilityHeight={0} /> */}
       </div>
     );
   }

@@ -5,7 +5,7 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 // import * as G2Plot from '@antv/g2plot'
 import { Column } from '@ant-design/plots';
 
-import { Table, Tag, Affix } from 'antd';
+import { Table, Tag, Tooltip, Divider } from 'antd';
 import { each, groupBy } from '@antv/util';
 
 class Dataset extends React.PureComponent {
@@ -19,279 +19,144 @@ class Dataset extends React.PureComponent {
 
     const chart_data = [
       {
-        "type": "ADC Signal",
+        "type": "Point Cloud",
         "x": "nuScenes",
-        "y": 1000
-      },
-      {
-        "type": "Frequency Tensor",
-        "x": "nuScenes",
-        "y": 100
+        "y": 60
       },
       {
         "type": "Point Cloud",
-        "y": null,
-        "x": "nuScenes"
+        "x": "Astyx",
+        "y": 8
       },
       {
-        "y": null,
-        "type": "ADC Signal"
+        "type": "Point Cloud",
+        "x": "DENSE",
+        "y": 30
       },
       {
-        "y": null,
-        "type": "Frequency Tensor"
+        "type": "Radar Tensor",
+        "x": "CARRADA",
+        "y": 28
       },
       {
-        "y": null,
-        "type": "Point Cloud"
+        "type": "Point Cloud",
+        "x": "HawkEye",
+        "y": 10
       },
       {
-        "x": "Column2",
-        "y": 831,
-        "type": "门店一"
+        "type": "Radar Tensor",
+        "x": "Zender",
+        "y": 13
       },
       {
-        "x": "Column2",
-        "y": 995,
-        "type": "门店二"
+        "type": "Point Cloud",
+        "x": "Zender",
+        "y": 13
       },
       {
-        "x": "Column2",
-        "y": 56,
-        "type": "Row1"
+        "type": "Radar Tensor",
+        "x": "RADIATE",
+        "y": 65
       },
       {
-        "x": "Column3",
-        "y": 645,
-        "type": "门店一"
+        "type": "Point Cloud",
+        "x": "AIODrive",
+        "y": 70
       },
       {
-        "x": "Column3",
-        "y": 325,
-        "type": "门店二"
+        "type": "Radar Tensor",
+        "x": "CRUW",
+        "y": 90
       },
       {
-        "x": "Column3",
-        "y": 735,
-        "type": "Row1"
+        "type": "ADC Signal",
+        "x": "RaDICaL",
+        "y": 88
       },
       {
-        "x": "Column4",
-        "y": 21,
-        "type": "门店一"
+        "type": "Point Cloud",
+        "x": "RadarScenes",
+        "y": 60
       },
       {
-        "x": "Column4",
-        "y": 746,
-        "type": "门店二"
+        "type": "Radar Tensor",
+        "x": "RADDet",
+        "y": 24
       },
       {
-        "x": "Column4",
-        "y": 708,
-        "type": "Row1"
+        "type": "Radar Tensor",
+        "x": "FloW",
+        "y": 6
       },
       {
-        "x": "Column5",
-        "y": 705,
-        "type": "门店一"
+        "type": "Point Cloud",
+        "x": "FloW",
+        "y": 6
       },
       {
-        "x": "Column5",
-        "y": 169,
-        "type": "门店二"
+        "type": "ADC Signal",
+        "x": "RADIal",
+        "y": 7
       },
       {
-        "x": "Column5",
-        "y": 565,
-        "type": "Row1"
+        "type": "Radar Tensor",
+        "x": "RADIal",
+        "y": 7
       },
       {
-        "x": "Column6",
-        "y": 515,
-        "type": "门店一"
+        "type": "Point Cloud",
+        "x": "RADIal",
+        "y": 7
       },
       {
-        "x": "Column6",
-        "y": 578,
-        "type": "门店二"
+        "type": "Point Cloud",
+        "x": "VOD",
+        "y": 21
       },
       {
-        "x": "Column6",
-        "y": 118,
-        "type": "Row1"
+        "type": "Point Cloud",
+        "x": "Boreas",
+        "y": 18
       },
       {
-        "x": "Column7",
-        "y": 600,
-        "type": "门店一"
+        "type": "Point Cloud",
+        "x": "TJ4DRadSet",
+        "y": 60
       },
       {
-        "x": "Column7",
-        "y": 774,
-        "type": "门店二"
+        "type": "Radar Tensor",
+        "x": "K-Radar",
+        "y": 55
       },
       {
-        "x": "Column7",
-        "y": 324,
-        "type": "Row1"
+        "type": "Radar Tensor",
+        "x": "aiMotive",
+        "y": 40
       },
-      {
-        "x": "Column8",
-        "y": 204,
-        "type": "门店一"
-      },
-      {
-        "x": "Column8",
-        "y": 835,
-        "type": "门店二"
-      },
-      {
-        "x": "Column8",
-        "y": 525,
-        "type": "Row1"
-      },
-      {
-        "x": "Column9",
-        "y": 554,
-        "type": "门店一"
-      },
-      {
-        "x": "Column9",
-        "y": 693,
-        "type": "门店二"
-      },
-      {
-        "x": "Column9",
-        "y": 8,
-        "type": "Row1"
-      },
-      {
-        "x": "Column10",
-        "y": 25,
-        "type": "门店一"
-      },
-      {
-        "x": "Column10",
-        "y": 195,
-        "type": "门店二"
-      },
-      {
-        "x": "Column10",
-        "y": 248,
-        "type": "Row1"
-      },
-      {
-        "x": "Column11",
-        "y": 549,
-        "type": "门店一"
-      },
-      {
-        "x": "Column11",
-        "y": 550,
-        "type": "门店二"
-      },
-      {
-        "x": "Column11",
-        "y": 641,
-        "type": "Row1"
-      },
-      {
-        "x": "Column12",
-        "y": 831,
-        "type": "门店一"
-      },
-      {
-        "x": "Column12",
-        "y": 531,
-        "type": "门店二"
-      },
-      {
-        "x": "Column12",
-        "y": 517,
-        "type": "Row1"
-      },
-      {
-        "x": "Column13",
-        "y": 346,
-        "type": "门店一"
-      },
-      {
-        "x": "Column13",
-        "y": 331,
-        "type": "门店二"
-      },
-      {
-        "x": "Column13",
-        "y": 862,
-        "type": "Row1"
-      },
-      {
-        "x": "Column14",
-        "y": 421,
-        "type": "门店一"
-      },
-      {
-        "x": "Column14",
-        "y": 310,
-        "type": "门店二"
-      },
-      {
-        "x": "Column14",
-        "y": 348,
-        "type": "Row1"
-      },
-      {
-        "x": "Column15",
-        "y": 905,
-        "type": "门店一"
-      },
-      {
-        "x": "Column15",
-        "y": 351,
-        "type": "门店二"
-      },
-      {
-        "x": "Column15",
-        "y": 561,
-        "type": "Row1"
-      },
-      {
-        "x": "Column16",
-        "y": 462,
-        "type": "门店一"
-      },
-      {
-        "x": "Column16",
-        "y": 226,
-        "type": "门店二"
-      },
-      {
-        "x": "Column16",
-        "y": 510,
-        "type": "Row1"
-      },
-      {
-        "x": "Column17",
-        "y": 55,
-        "type": "门店一"
-      },
-      {
-        "x": "Column17",
-        "y": 627,
-        "type": "门店二"
-      },
-      {
-        "x": "Column17",
-        "y": 940,
-        "type": "Row1"
-      }
+
     ];
     const annotations = [];
-    each(groupBy(chart_data, 'x'), (values, k) => {
-      const value = values.reduce((a, b) => a + b.y, 0);
+    // each(groupBy(chart_data, 'x'), (values, k) => {
+    //   const value = values.reduce((a, b) => a + b.y, 0);
+    //   annotations.push({
+    //     type: 'text',
+    //     position: [k, value],
+    //     content: `${value}k`,
+    //     style: {
+    //       textAlign: 'center',
+    //       fontSize: 14,
+    //       fill: 'rgba(0,0,0,0.85)',
+    //     },
+    //     offsetY: -10,
+    //   })
+    // });
+    const bar_number = [40, 0.5, 13, 12, 3, 11, 44, 100, 400, 393, 49, 10, 4, 8, 8, 7, 40, 35, 26]
+    const bar_fake = [60, 8, 30, 28, 10, 26, 65, 70, 90, 88, 60, 24, 12, 21, 21, 18, 60, 55, 40]
+    each(bar_number, (value, k) => {
+      // const value = values.reduce((a, b) => a + b.y, 0);
       annotations.push({
         type: 'text',
-        position: [k, value],
+        position: [k, bar_fake[k]],
         content: `${value}k`,
         style: {
           textAlign: 'center',
@@ -316,19 +181,18 @@ class Dataset extends React.PureComponent {
           offset: 20,
         },
       },
-      yAxis: {
-        // "title": null,
-      },
+      columnWidthRatio: 0.5,
+      // yAxis: false,
       autoFit: true,
-      appendPadding: [0, 300, 10 , 300],
+      appendPadding: [0, 100, 10 , 100],
       "xField": "x",
       "yField": "y",
       seriesField: 'type',
       "columnSize": 10,
       "color": [
-        "#5B8FF9",
-        "#5AD8A6",
-        "#5D7092",
+        "#9C6657",
+        "#B2934A",
+        "#5F9C6B",
         "#5b8ff9",
         "#5d7092",
         "#e8684a"
@@ -356,6 +220,7 @@ class Dataset extends React.PureComponent {
         },
       },
       annotations,
+  
       // annotations: [{
       //   type: 'text',
       //   position: [0, 1200],
@@ -541,18 +406,26 @@ class Dataset extends React.PureComponent {
       {
         title: 'Scenarios',
         dataIndex: 'scenarios',
-        render: (text, record) => (
-          <span>
-            {text.map(tag => {
-              return (
-                <div>
-                  {tag}
-                </div>
-              );
-            })}
-          </span>
-        )
+
+        // ellipsis: true,
+        // render: (address) => (
+        //   <Tooltip placement="topLeft" title={address}>
+        //     {address}
+        //   </Tooltip>
+        // )
+        // render: (text, record) => (
+        //   <span>
+        //     {text.map(tag => {
+        //       return (
+        //         <div>
+        //           {tag}
+        //         </div>
+        //       );
+        //     })}
+        //   </span>
+        // )
       },
+      Table.EXPAND_COLUMN,
       {
         title: 'Record Area',
         dataIndex: 'record_area',
@@ -871,12 +744,13 @@ class Dataset extends React.PureComponent {
     return (
       <div {...props} {...dataSource.wrapper} id="datasets">
         <div className="title-wrapper">
-          <h1 name="title" className="title-h1">Datasets</h1>
 
         <div className="chart">
+          <h2 name="title" className="title-h2">Radar-Camera Fusion Datasets</h2>
           <Column {...config} style={{ textAlign: 'center' }} />
         </div>
-        <Table bordered pagination={{ pageSize: 30, hideOnSinglePage: true }} columns={columns} dataSource={data} onChange={onChange} />;
+        <br/><br/><br/>
+        <Table bordered scroll={{x: '200px'}}  pagination={{ pageSize: 10, hideOnSinglePage: true }} columns={columns} dataSource={data} onChange={onChange} />
       </div>
       </div>
     );

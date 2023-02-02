@@ -92,10 +92,10 @@ class Comparison extends React.PureComponent {
     return (
       <div {...props} {...wrapper}>
         <div {...page}>
-          <div key="title" {...titleWrapper}>
+          {/* <div key="title" {...titleWrapper}>
             {titleWrapper.children.map(getChildrenToRender)}
-          </div>
-          <OverPack {...dataSource.OverPack}>
+          </div> */}
+          {/* <OverPack {...dataSource.OverPack}>
             <QueueAnim
               type="bottom"
               leaveReverse
@@ -104,7 +104,7 @@ class Comparison extends React.PureComponent {
             >
               {childrenToRender}
             </QueueAnim>
-          </OverPack>
+          </OverPack> */}
         </div>
       </div>
     );

@@ -15,6 +15,12 @@ export const Nav00DataSource = {
     children: [
       {
         name: 'linkNav',
+        to: 'characteristics',
+        children: 'Characteristics',
+        className: 'menu-item',
+      },
+      {
+        name: 'linkNav',
         to: 'datasets',
         children: 'Datasets',
         className: 'menu-item',
@@ -27,8 +33,8 @@ export const Nav00DataSource = {
       },
       {
         name: 'linkNav',
-        to: 'citation',
-        children: 'Citation',
+        to: 'references',
+        children: 'References',
         className: 'menu-item',
       },
     ],
@@ -90,7 +96,12 @@ export const Banner30DataSource = {
       {
         name: 'nameEn',
         className: 'banner3-name-en',
-        children: 'Shanliang Yao, Runwei Guan, Xiaohui Zhu',
+        children: 'Shanliang Yao, Runwei Guan, Xiaoyu Huang, Zixian Zhang, Xiangyu Sha, ',
+      },
+      {
+        name: 'nameEn',
+        className: 'banner3-name-en',
+        children: 'Yong Yue, Hyungjoon Seo, Ka Lok Man, Yutao Yue, Xiaohui Zhu',
       },
       
       // {
@@ -102,7 +113,7 @@ export const Banner30DataSource = {
       {
         name: 'time',
         className: 'banner3-time',
-        children: 'University of Liverpool',
+        children: 'University of Liverpool, Xi‘an Jiaotong-Liverpool University, Institute of Deep Perception Technology, JITRI',
       },
     ],
   },
@@ -133,7 +144,7 @@ export const Footer00DataSource = {
     className: 'copyright',
     children: (
       <span>
-        ©2022 <a href="https://github.com/XJTLU-VEC">XJTLU-VEC</a> All Rights Reserved
+        ©2023 <a href="https://github.com/XJTLU-VEC">XJTLU-VEC</a> All Rights Reserved
       </span>
     ),
   },

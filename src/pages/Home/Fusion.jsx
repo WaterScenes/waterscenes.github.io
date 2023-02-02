@@ -2,7 +2,7 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
-import { Table } from 'antd';
+import { Table, Divider } from 'antd';
 
 class Fusion extends React.PureComponent {
   render() {
@@ -714,9 +714,10 @@ class Fusion extends React.PureComponent {
     return (
       <div {...props} {...dataSource.wrapper} id="methods">
         <div className="title-wrapper">
-          <h1 name="title" className="title-h1">Fusion Methods</h1>
+        <h2 name="title" className="title-h1">Radar-Camera Fusion Methods</h2>
+          
         </div>
-        <Table bordered columns={columns} dataSource={data} onChange={onChange} />
+        <Table bordered scroll={{x: '200px'}} columns={columns} dataSource={data} onChange={onChange} />
       </div>
     );
   }

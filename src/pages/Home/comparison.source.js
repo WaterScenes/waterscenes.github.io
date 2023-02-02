@@ -99,11 +99,12 @@ export const ComparisonDataSource = {
             {
               className: 'pricing2-table-content-name',
               name: 'name',
-              children: '实例系列1',
+              children: 'Color, Texture, Shape',
             },
             {
-              children: 'Limited',
-              name: 'content0',
+              name: 'content1',
+              children:
+                'images/start-fill.svg',
               className: 'pricing2-table-content',
             },
             {
@@ -129,7 +130,7 @@ export const ComparisonDataSource = {
             {
               className: 'pricing2-table-content-name',
               name: 'name',
-              children: '实例系列2',
+              children: 'Range Measurement',
             },
             {
               children: 'Limited',
@@ -159,7 +160,7 @@ export const ComparisonDataSource = {
             {
               className: 'pricing2-table-content-name',
               name: 'name',
-              children: '固定宽带计费',
+              children: 'Velocity Measurement',
             },
             {
               name: 'content0',
@@ -189,7 +190,7 @@ export const ComparisonDataSource = {
             {
               className: 'pricing2-table-content-name',
               name: 'name',
-              children: '闲置负载均衡',
+              children: 'Lighting Robustness',
             },
             {
               children: '-',
@@ -222,7 +223,7 @@ export const ComparisonDataSource = {
             {
               className: 'pricing2-table-content-name',
               name: 'name',
-              children: '4核',
+              children: 'Weather Robustness',
             },
             {
               name: 'content0',
@@ -254,7 +255,69 @@ export const ComparisonDataSource = {
             {
               className: 'pricing2-table-content-name',
               name: 'name',
-              children: '系统盘（线性计费）',
+              children: 'Classification Ability',
+            },
+            {
+              name: 'content0',
+              children: '-',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content1',
+              children: '-',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content2',
+              children: '-',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content3',
+              children:
+                'https://gw.alipayobjects.com/zos/basement_prod/14ce3060-34e6-4b30-9a45-1a6b95542310.svg',
+              className: 'pricing2-table-content',
+            },
+          ],
+        },
+        {
+          name: 'list5',
+          children: [
+            {
+              className: 'pricing2-table-content-name',
+              name: 'name',
+              children: '3D Perception',
+            },
+            {
+              name: 'content0',
+              children: '-',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content1',
+              children: '-',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content2',
+              children: '-',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content3',
+              children:
+                'https://gw.alipayobjects.com/zos/basement_prod/14ce3060-34e6-4b30-9a45-1a6b95542310.svg',
+              className: 'pricing2-table-content',
+            },
+          ],
+        },
+        {
+          name: 'list5',
+          children: [
+            {
+              className: 'pricing2-table-content-name',
+              name: 'name',
+              children: 'System Cost',
             },
             {
               name: 'content0',
