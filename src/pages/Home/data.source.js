@@ -101,7 +101,7 @@ export const Banner30DataSource = {
       {
         name: 'nameEn',
         className: 'banner3-name-en',
-        children: 'Yong Yue, Hyungjoon Seo, Ka Lok Man, Yutao Yue, Xiaohui Zhu',
+        children: 'Yutao Yue, Yong Yue, Hyungjoon Seo, Ka Lok Man, Xiaohui Zhu',
       },
       
       // {

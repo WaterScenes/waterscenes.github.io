@@ -14,7 +14,7 @@ class Dataset extends React.PureComponent {
 
 
     const data_dataset = [
-      'H. Caesar et al., “nuScenes: A multimodal dataset for autonomous driving,” 2020 Ieee Cvf Conf Comput Vis Pattern Recognit Cvpr, vol. 00, pp. 11618–11628, 2020, doi: 10.1109/cvpr42600.2020.01164.',
+      'H. Caesar, V. Bankiti, A. H. Lang, S. Vora, V. E. Liong, Q. Xu, A. Krishnan, Y. Pan, G. Baldan, and O. Beijbom, nuScenes: A multi- modal dataset for autonomous driving, 2020 IEEE/CVFConference on Computer Vision and Pattern Recognition (CVPR), vol. 00, pp. 11618 11628, 2020, nuScenes.',
       'H. Caesar et al., “nuScenes: A multimodal dataset for autonomous driving,” 2020 Ieee Cvf Conf Comput Vis Pattern Recognit Cvpr, vol. 00, pp. 11618–11628, 2020, doi: 10.1109/cvpr42600.2020.01164.'
     ];
 
