@@ -139,7 +139,7 @@ export const Content130DataSource = {
 };
 export const Footer00DataSource = {
   wrapper: { className: 'home-page-wrapper footer0-wrapper' },
-  OverPack: { className: 'home-page footer0', playScale: 0.05 },
+  OverPack: { className: 'home-page footer0', playScale: 0.01 },
   copyright: {
     className: 'copyright',
     children: (

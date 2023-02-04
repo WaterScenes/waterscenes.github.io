@@ -288,7 +288,7 @@ class Fusion extends React.PureComponent {
       {
         key: '1',
         name: 'Distant vehicle detection using radar and vision, 1',
-        short_name: '',
+        short_name: '-',
         year: 2019,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -323,6 +323,7 @@ class Fusion extends React.PureComponent {
       {
         key: '3',
         name: 'Object Detection and Identification using Vision and Radar Data Fusion System for Ground-based Navigation, 3',
+        short_name: '-',
         year: 2019,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -340,6 +341,7 @@ class Fusion extends React.PureComponent {
       {
         key: '4',
         name: 'Automotive radar and camera fusion using Generative Adversarial Networks, 4',
+        short_name: 'CMGGAN',
         year: 2019,
         task: 'Semantic Segmentation',
         annotation: '2D point-level',
@@ -357,6 +359,7 @@ class Fusion extends React.PureComponent {
       {
         key: '5',
         name: 'Deep Learning Based 3D Object Detection for Automotive Radar and Camera, 5',
+        short_name: '-',
         year: 2019,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -374,6 +377,7 @@ class Fusion extends React.PureComponent {
       {
         key: '6',
         name: 'RVNet: Deep Sensor Fusion of Monocular Camera and Radar for Image-Based Obstacle Detection in Challenging Environments, 6',
+        short_name: 'RVNet',
         year: 2019,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -391,6 +395,7 @@ class Fusion extends React.PureComponent {
       {
         key: '7',
         name: 'Radar and Camera Early Fusion for Vehicle Detection in Advanced Driver Assistance Systems, 7',
+        short_name: 'FusionNet',
         year: 2019,
         task: 'Object Detection | Object Classification',
         annotation: '2D box-level',
@@ -409,6 +414,7 @@ class Fusion extends React.PureComponent {
       {
         key: '8',
         name: 'SO-Net: Joint Semantic Segmentation and Obstacle Detection Using Deep Fusion of Monocular Camera and Radar, 8',
+        short_name: 'SO-Net',
         year: 2020,
         task: 'Object Detection | Semantic Segmentation',
         annotation: '2D box-level | 2D pixel-level',
@@ -428,6 +434,7 @@ class Fusion extends React.PureComponent {
       {
         key: '9',
         name: 'Spatial Attention Fusion for Obstacle Detection Using MmWave Radar and Vision Sensor, 9',
+        short_name: 'SAF-FCOS',
         year: 2020,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -446,6 +453,7 @@ class Fusion extends React.PureComponent {
    {
         key: '10',
         name: 'A Deep learning-based radar and camera sensor fusion architecture for object detection, 10',
+        short_name: 'CRF-Net',
         year: 2019,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -465,6 +473,7 @@ class Fusion extends React.PureComponent {
       {
         key: '11',
         name: 'Seeing Through Fog Without Seeing Fog: Deep Multimodal Sensor Fusion in Unseen Adverse Weather, 11',
+        short_name: '-',
         year: 2020,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -484,6 +493,7 @@ class Fusion extends React.PureComponent {
       {
         key: '12',
         name: 'Radar+RGB Attentive Fusion for Robust Object Detection in Autonomous Vehicles, 12',
+        short_name: 'BIRANet',
         year: 2020,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -502,6 +512,7 @@ class Fusion extends React.PureComponent {
       {
         key: '13',
         name: 'Radar-Camera Sensor Fusion for Joint Object Detection and Distance Estimation in Autonomous Vehicles, 13',
+        short_name: '-',
         year: 2020,
         task: 'Object Detection | Depth Estimation',
         annotation: '2D box-level',
@@ -520,6 +531,7 @@ class Fusion extends React.PureComponent {
   {
         key: '14',
         name: 'YOdar: Uncertainty-based Sensor Fusion for Vehicle Detection with Camera and Radar Sensors, 14',
+        short_name: 'YOdar',
         year: 2020,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -538,6 +550,7 @@ class Fusion extends React.PureComponent {
       {
         key: '15',
         name: 'CenterFusion: Center-based Radar and Camera Fusion for 3D Object Detection, 15',
+        short_name: 'CenterNet',
         year: 2020,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -557,6 +570,7 @@ class Fusion extends React.PureComponent {
       {
         key: '16',
         name: 'RODNet: Radar Object Detection Using Cross-Modal Supervision, 16',
+        short_name: 'RODNet',
         year: 2020,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -575,6 +589,7 @@ class Fusion extends React.PureComponent {
       {
         key: '17',
         name: 'RAMP-CNN: A Novel Neural Network for Enhanced Automotive Radar Object Recognition, 17',
+        short_name: 'RAMP-CNN',
         year: 2021,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -593,6 +608,7 @@ class Fusion extends React.PureComponent {
       {
         key: '18',
         name: 'A Feature Pyramid Fusion Detection Algorithm Based on Radar and Camera Sensor, 18',
+        short_name: '-',
         year: 2021,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -611,6 +627,7 @@ class Fusion extends React.PureComponent {
      {
         key: '19',
         name: 'Low-level Sensor Fusion Network for 3D Vehicle Detection using Radar Range-Azimuth Heatmap and Monocular Image, 19',
+        short_name: '-',
         year: 2020,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -630,6 +647,7 @@ class Fusion extends React.PureComponent {
     {
         key: '20',
         name: 'Radar Camera Fusion via Representation Learning in Autonomous Driving, 20',
+        short_name: 'AssociationNet',
         year: 2021,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -649,6 +667,7 @@ class Fusion extends React.PureComponent {
      {
         key: '21',
         name: 'Radar Voxel Fusion for 3D Object Detection, 21',
+        short_name: 'RVF-Net',
         year: 2021,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -668,6 +687,7 @@ class Fusion extends React.PureComponent {
       {
         key: '22',
         name: '3D Detection and Tracking for On-road Vehicles with a Monovision Camera and Dual Low-cost 4D mmWave Radars, 22',
+        short_name: '-',
         year: 2021,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -686,6 +706,7 @@ class Fusion extends React.PureComponent {
      {
         key: '23',
         name: 'Robust Small Object Detection on the Water Surface through Fusion of Camera and Millimeter Wave Radar, 23',
+        short_name: 'RISFNet',
         year: 2021,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -705,6 +726,7 @@ class Fusion extends React.PureComponent {
       {
         key: '24',
         name: 'GRIF Net: Gated Region of Interest Fusion Network for Robust 3D Object Detection from Radar Point Cloud and Monocular Image, 24',
+        short_name: 'GRIF Net',
         year: 2021,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -724,6 +746,7 @@ class Fusion extends React.PureComponent {
       {
         key: '25',
         name: 'Fusion Point Pruning for Optimized 2D Object Detection with Radar-Camera Fusion, 25',
+        short_name: '-',
         year: 2021,
         task: 'Object Detection',
         annotation: '2D box-level',
@@ -743,6 +766,7 @@ class Fusion extends React.PureComponent {
       {
         key: '26',
         name: 'A Simple Baseline for BEV Perception Without LiDAR, 26',
+        short_name: '-',
         year: 2021,
         task: 'Semantic Segmentation',
         annotation: '2D pixel-level',
@@ -761,6 +785,7 @@ class Fusion extends React.PureComponent {
     {
         key: '27',
         name: 'RadSegNet: A Reliable Approach to Radar Camera Fusion, 27',
+        short_name: 'RadSegNet',
         year: 2022,
         task: 'Object Detection',
         annotation: '2D box-level | 2D pixel-level',
@@ -779,6 +804,7 @@ class Fusion extends React.PureComponent {
     {
         key: '28',
         name: 'Bridging the View Disparity of Radar and Camera Features for Multi-modal Fusion 3D Object Detection, 28',
+        short_name: 'RCBEV',
         year: 2022,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -798,6 +824,7 @@ class Fusion extends React.PureComponent {
        {
         key: '29',
         name: 'CRAFT: Camera-Radar 3D Object Detection with Spatio-Contextual Fusion Transformer, 29',
+        short_name: 'CRAFT',
         year: 2022,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -817,6 +844,7 @@ class Fusion extends React.PureComponent {
        {
         key: '30',
         name: 'DeepFusion: A Robust and Modular 3D Object Detector for Lidars, Cameras and Radar, 30',
+        short_name: 'DeepFusion',
         year: 2022,
         task: 'Object Detection',
         annotation: '3D box-level',
@@ -835,6 +863,7 @@ class Fusion extends React.PureComponent {
        {
         key: '31',
         name: 'CramNet: Camera-Radar Fusion with Ray-Constrained Cross-Attention for Robust 3D Object Detection, 31',
+        short_name: 'CramNet',
         year: 2022,
         task: 'Object Detection',
         annotation: '3D box-level',
