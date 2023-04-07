@@ -178,7 +178,7 @@ class RadarChart extends React.PureComponent {
         star: 3,
       },
       {
-        name: 'System Cost',
+        name: 'Cost Advantage',
         star: 4,
       },
     ];
