@@ -210,11 +210,11 @@ class Dataset extends React.PureComponent {
       tooltip: {
         // fields: ['x', 'y'],
         showContent: true,
-        customItems: (originalItems: TooltipItem[]) => {
+        customItems: (originalItems) => {
           // process originalItems, 
           return originalItems;
         },
-        formatter: (datum: Datum) => {
+        formatter: (datum) => {
           console.log(datum)
           return { name: datum.type, value: '✅' };
         },

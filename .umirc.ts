@@ -6,9 +6,9 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
-  // layout: {
-  //   title: '@umijs/max',
-  // },
+  history: { type: 'hash' },
+  base: 'Radar-Camera-Fusion-Website',
+  publicPath: './',
   routes: [
     {
       path: '/',
