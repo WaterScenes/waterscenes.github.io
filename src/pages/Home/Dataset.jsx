@@ -30,7 +30,7 @@ class Dataset extends React.PureComponent {
       },
       {
         "type": "Point Cloud",
-        "x": "DENSE",
+        "x": "SeeingThroughFog",
         "y": 30
       },
       {
@@ -414,13 +414,13 @@ class Dataset extends React.PureComponent {
         title: 'Categories',
         dataIndex: 'categories',
       },
-      {
-        title: 'Size',
-        dataIndex: 'size',
-      },
-      {
-        title: 'Scenarios',
-        dataIndex: 'scenarios',
+      // {
+      //   title: 'Size',
+      //   dataIndex: 'size',
+      // },
+      // {
+      //   title: 'Scenarios',
+      //   dataIndex: 'scenarios',
 
         // ellipsis: true,
         // render: (address) => (
@@ -439,7 +439,7 @@ class Dataset extends React.PureComponent {
         //     })}
         //   </span>
         // )
-      },
+      // },
       Table.EXPAND_COLUMN,
       {
         title: 'Record Area',
@@ -548,7 +548,7 @@ class Dataset extends React.PureComponent {
         radar_data_representation: ['Range-Doppler Tensor',
           'Range-Azimuth Tensor', 'Point Cloud'],
         category_number: 1,
-        categories: '1 class (Car)',
+        categories: 'Car',
         size: 'Over 11k moving cars labeled in 27 diverse scenes with over 40k automatically generated labels',
         scenarios: ['Complex urban driving scenarios'],
         record_area: '-',
@@ -791,7 +791,23 @@ class Dataset extends React.PureComponent {
           <Column {...config} style={{ textAlign: 'center' }} />
         </div>
         <br/><br/><br/>
-        <Table bordered scroll={{x: '200px'}}  pagination={{ pageSize: 10, hideOnSinglePage: true }} columns={columns} dataSource={data} onChange={onChange} />
+        <Table bordered scroll={{x: '200px'}}  pagination={{ pageSize: 10, hideOnSinglePage: true }} columns={columns} dataSource={data} onChange={onChange} 
+        expandable={{
+          columnTitle: 'Size / Scenarios',
+          expandedRowRender: (record) => (
+            <p
+              style={{
+                margin: 0,
+              }}
+            >
+            Size:  {record.size}<br></br>
+            Scenarios:  {record.scenarios}
+            </p>
+            
+          ),
+          rowExpandable: (record) => record.name !== 'Not Expandable',
+        }}
+        />
       </div>
       </div>
     );

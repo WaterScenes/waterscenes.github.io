@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "max build",
-    "start": "npm run dev",
+    "start": "max dev",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

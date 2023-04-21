@@ -67,8 +67,9 @@ class Dataset extends React.PureComponent {
       'T. Zhou, Y. Shi, J. Chen, K. Jiang, M. Yang, and D. Yang, “Bridging the View Disparity of Radar and Camera Features for Multi-modal Fusion 3D Object Detection,” arXiv, 2022.',
       'Y. Kim, S. Kim, J. W. Choi, and D. Kum, “CRAFT: Camera-Radar 3D Object Detection with Spatio-Contextual Fusion Transformer,” arXiv, 2022.',
       'F. Drews, D. Feng, F. Faion, L. Rosenbaum, M. Ulrich, and C. Gla ̈ser, “DeepFusion: A Robust and Modular 3D Object Detector for Lidars, Cameras and Radars,” arXiv, 2022.',
-      'J.-J. Hwang, H. Kretzschmar, J. Manela, S. Rafferty, N. ArmstrongCrews, T. Chen, and D. Anguelov, “CramNet: Camera-Radar Fusion with Ray-Constrained Cross-Attention for Robust 3D Object Detection,” arXiv, 2022.'
-
+      'J.-J. Hwang, H. Kretzschmar, J. Manela, S. Rafferty, N. ArmstrongCrews, T. Chen, and D. Anguelov, “CramNet: Camera-Radar Fusion with Ray-Constrained Cross-Attention for Robust 3D Object Detection,” arXiv, 2022.',
+      'Z. Wu, G. Chen, Y. Gan, L. Wang, and J. Pu, Mvfusion: Multi-view 3d object detection with semantic-aligned radar and camera fusion, arXiv preprint arXiv:2302.10511, 2023.',
+      'Y. Kim, S. Kim, J. Shin, J. W. Choi, and D. Kum, Crn: Camera radar net for accurate, robust, efAcient 3d perception, arXiv preprint arXiv:2304.00670, 2023.'
     ];
 
     const references_dataset = data_dataset.map((item, key) => {
@@ -78,7 +79,7 @@ class Dataset extends React.PureComponent {
         </p>
       );
     });
-    const references_fusion = data_dataset.map((item, key) => {
+    const references_fusion = data_fusion.map((item, key) => {
       return (
         <p>
           [{key + 1 + data_dataset.length}] {item}
@@ -100,12 +101,27 @@ class Dataset extends React.PureComponent {
           {/* </div> */}
         {/* </div> */}
         {/* <div style={{ backgroundColor: '#e6f7ff', height: '40px' }}>11</div> */}
-        <div className="content12">
+        <div className="content12" style={{ height: '400px', overflowY: 'scroll' }}>
           <h1  name="title" class="title-h1">References</h1>
           <span>
             {references_dataset}
             {references_fusion}
           </span>
+        </div>
+        <div className="content12">
+          <h1  name="title" class="title-h1">Citation</h1>
+          <div style={{backgroundColor: '#f3f6fa', padding: '10px'}}>
+          <code>
+          {"@misc{yao2023radarcamera,"}<br></br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;{"title={Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Comprehensive Review}, " }<br></br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;{"author={Shanliang Yao and Runwei Guan and Xiaoyu Huang and Zhuoxiao Li and Xiangyu Sha and Yong Yue and Eng Gee Lim and Hyungjoon Seo and Ka Lok Man and Xiaohui Zhu and Yutao Yue}," }<br></br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;{"year={2023},"}<br></br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;{"eprint={2304.10410},"}<br></br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;{"archivePrefix={arXiv},"}<br></br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;{"primaryClass={cs.CV}"}<br></br> 
+          {"}"}
+          </code>
+          </div>
         </div>
       </div>
     )

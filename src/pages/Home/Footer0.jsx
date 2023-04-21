@@ -4,6 +4,14 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
 class Footer extends React.PureComponent {
   render() {
+    var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?58d144a733fcb2ea441a68157d15c700";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
     const { ...props } = this.props;
     const { dataSource } = props;
     delete props.dataSource;

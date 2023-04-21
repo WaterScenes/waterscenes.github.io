@@ -90,18 +90,18 @@ export const Banner30DataSource = {
         name: 'slogan',
         className: 'banner3-slogan',
         children:
-          'Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Review',
+          'Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Comprehensive Review',
         // texty: true,
       },
       {
         name: 'nameEn',
         className: 'banner3-name-en',
-        children: 'Shanliang Yao, Runwei Guan, Xiaoyu Huang, Zixian Zhang, Xiangyu Sha, ',
+        children: 'Shanliang Yao, Runwei Guan, Xiaoyu Huang, Zhuoxiao Li, Xiangyu Sha, ',
       },
       {
         name: 'nameEn',
         className: 'banner3-name-en',
-        children: 'Yutao Yue, Yong Yue, Hyungjoon Seo, Ka Lok Man, Xiaohui Zhu',
+        children: 'Yong Yue, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Xiaohui Zhu, Yutao Yue',
       },
       
       // {
