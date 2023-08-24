@@ -27,6 +27,12 @@ export const Nav00DataSource = {
       },
       {
         name: 'linkNav',
+        to: 'radar-camera-fusion',
+        children: 'Radar-Camera Fusion',
+        className: 'menu-item',
+      },
+      {
+        name: 'linkNav',
         to: 'Citation',
         children: 'Citation',
         className: 'menu-item',
@@ -90,12 +96,12 @@ export const Banner30DataSource = {
       {
         name: 'nameEn',
         className: 'banner3-name-en',
-        children: 'Shanliang Yao, Runwei Guan, Zhaodong Wu, Yi Ni, Zixian Zhang, Zile Huang',
+        children: 'Shanliang Yao, Runwei Guan, Zhaodong Wu, Yi Ni, Zile Huang, Zixian Zhang, Yong Yue'
       },
       {
         name: 'nameEn',
         className: 'banner3-name-en',
-        children: 'Xiaohui Zhu, Yutao Yue, Yong Yue, Hyungjoon Seo, Ka Lok Man',
+        children: 'Weiping Ding, Eng Gee Lim, Hyungjoon Seo, Ka Lok Man, Xiaohui Zhu, Yutao Yue',
       },
       
       // {
@@ -107,7 +113,7 @@ export const Banner30DataSource = {
       {
         name: 'time',
         className: 'banner3-time',
-        children: 'University of Liverpool, Xi‘an Jiaotong-Liverpool University, Institute of Deep Perception Technology, JITRI',
+        children: 'University of Liverpool, Xi‘an Jiaotong-Liverpool University, Nantong University, Institute of Deep Perception Technology, JITRI',
       },
       {
         name: 'button',

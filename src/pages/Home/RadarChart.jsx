@@ -10,6 +10,7 @@ import { Col, Row, Avatar, List, Divider } from 'antd';
 import { each, groupBy } from '@antv/util';
 import adverse from "./images/adverse-4.png"
 import USV from "./images/USV.png"
+import network from "./images/WaterScenes-network.png"
 
 const Feature40DataSource = {
   wrapper: { className: 'home-page-wrapper content6-wrapper' },
@@ -367,10 +368,10 @@ class RadarChart extends React.PureComponent {
         title: 'Our dataset covers diverse <b>time conditions</b> (daytime, nightfall, night), <b>lighting conditions</b> (normal, dim, strong), <b>weather conditions</b> (sunny, overcast, rainy, snowy) and <b>waterway conditions</b> (river, lake, canal, moat). An information list is also offered for retrieving specific data for experiments under different conditions.',
       },
       {
-        title: 'We provide <b>2D box-level</b> and <b>pixel-level</b> annotations for camera images, and <b>3D point-level</b> annotations for radar point clouds. We also offer precise timestamps for the synchronization of different sensors, as well as intrinsic and extrinsic parameters.',
+        title: 'We provide <b>2D box-level</b> and <b>pixel-level</b> annotations for camera images, and <b>3D point-level</b> annotations for radar point clouds. We also We provide a <b>toolkit</b> for radar point clouds that includes: pre-processing, labeling, projection and visualization, assisting researchers in processing and analyzing our dataset.',
       },
       {
-        title: 'We provide a <b>toolkit</b> for radar point clouds that includes: pre-processing, labeling, projection and visualization, assisting researchers in processing and analyzing our dataset.',
+        title: 'We build corresponding benchmarks and evaluate popular algorithms for object detection, point cloud segmentation, image segmentation, and panoptic perception. Experiments demonstrate the advantages of radar perception on water surfaces, particularly in adverse lighting and weather conditions.',
       },
     ];
 
@@ -387,7 +388,7 @@ class RadarChart extends React.PureComponent {
               </div>
             </div>
           </div>
-          <div class="ant-col content6-img ant-col-xs-24 ant-col-md-24" style={{padding: '10px 0 0 0'}}>
+          <div class="ant-col content6-img ant-col-xs-24 ant-col-md-24" style={{ padding: '10px 0 0 0' }}>
             <List
               header={<h2>Contributions:</h2>}
               itemLayout="horizontal"
@@ -398,7 +399,7 @@ class RadarChart extends React.PureComponent {
                   <List.Item.Meta
                     // avatar={<Avatar src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`} />}
                     // title={item.title}
-                    title={<div dangerouslySetInnerHTML={{ __html: item.title}} />}
+                    title={<div dangerouslySetInnerHTML={{ __html: item.title }} />}
                   // description={item.title}
                   />
                 </List.Item>
@@ -420,13 +421,50 @@ class RadarChart extends React.PureComponent {
           </div>
         </div>
 
+        <div class="ant-row home-page content6" id="radar-camera-fusion">
+          <Divider orientation="center"><h1 name="title" className="title-h1">Radar-Camera Fusion</h1></Divider>
+          <Divider orientation="left" plain>
+            <h2>Characteristic of Radar and Camera Sensors</h2>
+            </Divider>
+          <div class="ant-col content6-text ant-col-xs-24 ant-col-md-11">
+            <Row>
+              <Col span={24} ><Radar {...radar_config} /></Col>
+              {/* </Row> */}
+              {/* <Row> */}
+              <Col span={24} ><Radar {...camera_config} /></Col>
+            </Row>
+          </div>
+          <div class="ant-col content6-text ant-col-xs-24 ant-col-md-13">
+            <Row align="start">
+              <Col span={24}>
+                <Radar {...fusion_config} />
+              </Col>
+
+            </Row>
+          </div>
+          <br></br>
+
+          <div class="ant-col content6-text ant-col-xs-24 ant-col-md-24">
+            <Divider orientation="left" plain>
+            <h2>4D Radar-Camera Fusion on Water Surfaces</h2>
+            </Divider>
+            
+            <Row align="start">
+              <Col span={24}>
+                <Image src={network}></Image>
+              </Col>
+
+            </Row>
+          </div>
+        </div>
+
         <div class="ant-row home-page content6" id="Citation">
           <h1 name="title" class="title-h1">Citation</h1>
           <div style={{ backgroundColor: '#f3f6fa', padding: '10px' }}>
             <code>
               {"@misc{yao2023waterscenes,"}<br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;{"title={WaterScenes: A Multi-Task 4D Radar-Camera Fusion Dataset and Benchmark for Autonomous Driving on Water Surfaces}, "}<br></br>
-              &nbsp;&nbsp;&nbsp;&nbsp;{"author={Shanliang Yao and Runwei Guan and Zhaodong Wu and Yi Ni and Zixian Zhang and Zile Huang and Xiaohui Zhu and Yutao Yue and Yong Yue and Hyungjoon Seo and Ka Lok Man},"}<br></br>
+              &nbsp;&nbsp;&nbsp;&nbsp;{"author={Shanliang Yao and Runwei Guan and Zhaodong Wu and Yi Ni and Zile Huang and Zixian Zhang and Yong Yue and Weiping Ding and Eng Gee Lim and Hyungjoon Seo and Ka Lok Man and Xiaohui Zhu and Yutao Yue},"}<br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;{"year={2023},"}<br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;{"eprint={2307.06505},"}<br></br>
               &nbsp;&nbsp;&nbsp;&nbsp;{"archivePrefix={arXiv},"}<br></br>

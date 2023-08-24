@@ -6,12 +6,8 @@ import { enquireScreen } from 'enquire-js';
 
 import Nav0 from './Nav0';
 import Banner3 from './Banner3';
-import Comparison from './Comparison';
 import Feature4 from './Feature4';
 import RadarChart from './RadarChart';
-import Dataset from './Dataset';
-import Fusion from './Fusion';
-import Reference from './Reference';
 import Content13 from './Content13';
 import Footer0 from './Footer0';
 
@@ -27,16 +23,6 @@ import {
   DatasetDataSource,
 } from './dataset.source';
 
-import {
-  FusionDataSource,
-} from './fusion.source';
-
-import {
-  ReferenceDataSource,
-} from './reference.source';
-import {
-  ComparisonDataSource,
-} from './comparison.source';
 
 import './less/antMotionStyle.less';
 import './less/feature4.less';
@@ -108,24 +94,6 @@ export default class Home extends React.Component {
         dataSource={DatasetDataSource}
         isMobile={this.state.isMobile}
       />,
-      // <Dataset
-      //   id="Dataset0_0"
-      //   key="Dataset0_0"
-      //   dataSource={DatasetDataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
-      // <Fusion
-      //   id="Fusion0_0"
-      //   key="Fusion0_0"
-      //   dataSource={FusionDataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
-      // <Reference
-      //   id="Fusion0_0"
-      //   key="Fusion0_0"
-      //   dataSource={ReferenceDataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
       <Content13
         id="Content13_0"
         key="Content13_0"
